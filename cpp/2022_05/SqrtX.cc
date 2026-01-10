@@ -43,9 +43,9 @@ int main() {
   int ans1 = mySqrt(x1);
   int ans2 = mySqrt(x2);
 
-  cout << ans0 << endl; // 2
-  cout << ans1 << endl; // 2
-  cout << ans2 << endl; // 3
+  cout << ans0 << endl;  // 2
+  cout << ans1 << endl;  // 2
+  cout << ans2 << endl;  // 3
 
   return 0;
 }

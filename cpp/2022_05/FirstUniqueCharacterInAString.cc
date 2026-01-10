@@ -18,9 +18,10 @@ Constraints:
 1 <= s.length <= 10^5
 s consists of only lowercase English letters.*/
 
+#include <math.h>
+
 #include <cstring>
 #include <iostream>
-#include <math.h>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -43,7 +44,7 @@ int firstUniqChar(string s) {
     }
   }
 
-  for (auto &it : charIndices) {
+  for (auto& it : charIndices) {
     if (!isUnique[it.first - 'a']) {
       continue;
     }
@@ -67,9 +68,9 @@ int main() {
   int ans1 = firstUniqChar(s1);
   int ans2 = firstUniqChar(s2);
 
-  cout << ans0 << endl; // 0
-  cout << ans1 << endl; // 2
-  cout << ans2 << endl; // -1
+  cout << ans0 << endl;  // 0
+  cout << ans1 << endl;  // 2
+  cout << ans2 << endl;  // -1
 
   return 0;
 }
