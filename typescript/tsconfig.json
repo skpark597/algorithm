@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "declaration": true,
+        "allowJs": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true, 
+        "target": "ES2019",
+        "outDir": "./dist",
+        "rootDir": "./",
+        "lib": ["es2019"],
+        "noImplicitAny": true,
+        "strict": true,
+        "esModuleInterop": true 
+    },
+    "exclude": ["node_modules", "test", "dist", "**/*.spec.ts"]
+}

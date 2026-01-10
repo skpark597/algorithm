@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "dev",
+            "runtimeExecutable": "npm",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "integratedTerminal",
+            "runtimeArgs": ["run", "dev"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "staging",
+            "runtimeExecutable": "npm",
+            "env": {
+                "NODE_ENV": "staging"
+            },
+            "console": "integratedTerminal",
+            "runtimeArgs": ["run", "staging"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "test",
+            "runtimeExecutable": "npm",
+            "console": "integratedTerminal",
+            "runtimeArgs": ["run", "test"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}"
+        },
+    ]
+}
