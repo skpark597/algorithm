@@ -8,5 +8,13 @@
   },
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
-  }
+  },
+  "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+  },
+  "github.copilot.editor.enableCodeActions": false
+
 }
