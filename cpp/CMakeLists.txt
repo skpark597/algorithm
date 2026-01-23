@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(YEAR_MONTH 2026_01)
-set(FILE_NAME SpiralMatrix.cc)
+set(FILE_NAME LinkedListCycle.cc)
 
 file(GLOB SRC_FILES "./${YEAR_MONTH}/${FILE_NAME}")
 
