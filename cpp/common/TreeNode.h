@@ -16,6 +16,6 @@ class TreeNode {
 
 namespace util {
 TreeNode* makeTree(vector<int> nums);
-bool isSameTree(TreeNode* root0, TreeNode root1);
+bool isSameTree(TreeNode* root0, TreeNode* root1);
 void printTree(TreeNode* root);
 }  // namespace util
