@@ -7,6 +7,7 @@ sys.path.insert(1, abspath(SRC_DIR))
 from common.tree_node import TreeNode
 from common.util import is_same_tree
 import year_twenty_six.april.construct_binary_tree_from_inorder_and_postorder_traversal as inorder_and_postorder_traversal
+import year_twenty_six.april.average_of_levels_in_binary_tree as average_of_levels_in_binary_tree
 
 
 def test_inorder_and_postorder_traversal():
@@ -32,3 +33,19 @@ def test_inorder_and_postorder_traversal():
     assert is_same_tree(ret0, ans0)
     assert is_same_tree(ret1, ans1)
     assert is_same_tree(ret2, ans2)
+
+
+def test_average_of_levels_in_binary_tree():
+    solution = average_of_levels_in_binary_tree.Solution()
+
+    root0 = TreeNode.make([3, 9, 20, None, None, 15, 7])
+    root1 = TreeNode.make([3, 9, 20, 15, 7])
+
+    ans0 = [3.0, 14.5, 11.0]
+    ans1 = [3.0, 14.5, 11.0]
+
+    ret0 = solution.average_of_levels(root0)
+    ret1 = solution.average_of_levels(root1)
+
+    assert ret0 == ans0
+    assert ret1 == ans1
