@@ -8,6 +8,7 @@ from common.tree_node import TreeNode
 from common.util import is_same_tree
 import year_twenty_six.april.construct_binary_tree_from_inorder_and_postorder_traversal as inorder_and_postorder_traversal
 import year_twenty_six.april.average_of_levels_in_binary_tree as average_of_levels_in_binary_tree
+import year_twenty_six.april.word_break as word_break
 
 
 def test_inorder_and_postorder_traversal():
@@ -49,3 +50,24 @@ def test_average_of_levels_in_binary_tree():
 
     assert ret0 == ans0
     assert ret1 == ans1
+
+
+def test_word_break():
+    solution = word_break.Solution()
+
+    s0 = "leetcode"
+    word_dict0 = ["leet", "code"]
+
+    s1 = "applepenapple"
+    word_dict1 = ["apple", "pen"]
+
+    s2 = "catsandog"
+    word_dict2 = ["cats", "dog", "sand", "and", "cat"]
+
+    ret0 = solution.word_break(s0, word_dict0)
+    ret1 = solution.word_break(s1, word_dict1)
+    ret2 = solution.word_break(s2, word_dict2)
+
+    assert ret0 is True
+    assert ret1 is True
+    assert ret2 is False
