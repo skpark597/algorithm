@@ -4,11 +4,13 @@ from os.path import abspath, dirname, join
 SRC_DIR = join(dirname(__file__), "../../src")
 sys.path.insert(1, abspath(SRC_DIR))
 
+from common.list_node import ListNode
 from common.tree_node import TreeNode
-from common.util import is_same_tree
+from common.util import is_same_list_nodes, is_same_tree
 import year_twenty_six.april.construct_binary_tree_from_inorder_and_postorder_traversal as inorder_and_postorder_traversal
 import year_twenty_six.april.average_of_levels_in_binary_tree as average_of_levels_in_binary_tree
 import year_twenty_six.april.word_break as word_break
+import year_twenty_six.april.remove_nth_node_from_end_of_list as remove_nth_from_end
 
 
 def test_inorder_and_postorder_traversal():
@@ -71,3 +73,27 @@ def test_word_break():
     assert ret0 is True
     assert ret1 is True
     assert ret2 is False
+
+
+def test_remove_nth_from_end():
+    solution = remove_nth_from_end.Solution()
+
+    head0 = ListNode.make([1, 2, 3, 4, 5])
+    head1 = ListNode.make([1])
+    head2 = ListNode.make([1, 2])
+
+    n0 = 2
+    n1 = 1
+    n2 = 1
+
+    ret0 = solution.remove_nth_from_end(head0, n0)
+    ret1 = solution.remove_nth_from_end(head1, n1)
+    ret2 = solution.remove_nth_from_end(head2, n2)
+
+    ans0 = ListNode.make([1, 2, 3, 5])
+    ans1 = ListNode.make([])
+    ans2 = ListNode.make([1])
+
+    assert is_same_list_nodes(ret0, ans0)
+    assert is_same_list_nodes(ret1, ans1)
+    assert is_same_list_nodes(ret2, ans2)
