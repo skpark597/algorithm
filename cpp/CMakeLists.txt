@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(YEAR_MONTH 2026_04)
-set(FILE_NAME SearchInsertPosition.cc)
+set(FILE_NAME FlattenBinaryTreeToLinkedList.cc)
 
 file(GLOB SRC_FILES "./${YEAR_MONTH}/${FILE_NAME}")
 
