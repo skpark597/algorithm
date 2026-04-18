@@ -11,6 +11,7 @@ import year_twenty_six.april.construct_binary_tree_from_inorder_and_postorder_tr
 import year_twenty_six.april.average_of_levels_in_binary_tree as average_of_levels_in_binary_tree
 import year_twenty_six.april.word_break as word_break
 import year_twenty_six.april.remove_nth_node_from_end_of_list as remove_nth_from_end
+import year_twenty_six.april.simplify_path as simplify_path
 
 
 def test_inorder_and_postorder_traversal():
@@ -97,3 +98,31 @@ def test_remove_nth_from_end():
     assert is_same_list_nodes(ret0, ans0)
     assert is_same_list_nodes(ret1, ans1)
     assert is_same_list_nodes(ret2, ans2)
+
+
+def test_simplify_path():
+    solution = simplify_path.Solution()
+
+    path0 = "/home/"
+    path1 = "/home//foo"
+    path2 = "/home/user/Documents/../Pictures"
+    path3 = "/../"
+    path4 = "/.../a/../b/c/../d/./"
+
+    ret0 = solution.simplify_path(path0)
+    ret1 = solution.simplify_path(path1)
+    ret2 = solution.simplify_path(path2)
+    ret3 = solution.simplify_path(path3)
+    ret4 = solution.simplify_path(path4)
+
+    ans0 = "/home"
+    ans1 = "/home/foo"
+    ans2 = "/home/user/Pictures"
+    ans3 = "/"
+    ans4 = "/.../b/d"
+
+    assert ret0 == ans0
+    assert ret1 == ans1
+    assert ret2 == ans2
+    assert ret3 == ans3
+    assert ret4 == ans4

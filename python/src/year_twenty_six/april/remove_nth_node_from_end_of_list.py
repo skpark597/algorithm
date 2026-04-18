@@ -38,4 +38,5 @@ class Solution:
             slow, fast = slow.next, fast.next
 
         slow.next = slow.next.next
+
         return dummy.next
