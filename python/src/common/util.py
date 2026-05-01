@@ -1,4 +1,5 @@
 from typing import List, Optional
+import copy
 
 # pylint: disable=E0401
 from common.list_node import ListNode
@@ -6,8 +7,17 @@ from common.tree_node import TreeNode
 
 
 def is_same_double_arrays_ignoring_order(arr0: List[List[int]], arr1: List[List[int]]):
-    sorted0 = sorted(arr0)
-    sorted1 = sorted(arr1)
+    copy0 = copy.deepcopy(arr0)
+    copy1 = copy.deepcopy(arr1)
+
+    for elem0 in copy0:
+        elem0.sort()
+
+    for elem1 in copy1:
+        elem1.sort()
+
+    sorted0 = sorted(copy0)
+    sorted1 = sorted(copy1)
 
     return sorted0 == sorted1
 

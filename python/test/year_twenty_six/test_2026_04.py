@@ -6,12 +6,13 @@ sys.path.insert(1, abspath(SRC_DIR))
 
 from common.list_node import ListNode
 from common.tree_node import TreeNode
-from common.util import is_same_list_nodes, is_same_tree
+from common.util import is_same_double_arrays_ignoring_order, is_same_list_nodes, is_same_tree
 import year_twenty_six.april.construct_binary_tree_from_inorder_and_postorder_traversal as inorder_and_postorder_traversal
 import year_twenty_six.april.average_of_levels_in_binary_tree as average_of_levels_in_binary_tree
 import year_twenty_six.april.word_break as word_break
 import year_twenty_six.april.remove_nth_node_from_end_of_list as remove_nth_from_end
 import year_twenty_six.april.simplify_path as simplify_path
+import year_twenty_six.april.group_anagrams as group_anagrams
 
 
 def test_inorder_and_postorder_traversal():
@@ -126,3 +127,23 @@ def test_simplify_path():
     assert ret2 == ans2
     assert ret3 == ans3
     assert ret4 == ans4
+
+
+def test_group_anagrams():
+    solution = group_anagrams.Solution()
+
+    strs0 = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    strs1 = [""]
+    strs2 = ["a"]
+
+    ret0 = solution.group_anagrams(strs0)
+    ret1 = solution.group_anagrams(strs1)
+    ret2 = solution.group_anagrams(strs2)
+
+    ans0 = [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]
+    ans1 = [[""]]
+    ans2 = [["a"]]
+
+    assert is_same_double_arrays_ignoring_order(ret0, ans0)
+    assert is_same_double_arrays_ignoring_order(ret1, ans1)
+    assert is_same_double_arrays_ignoring_order(ret2, ans2)
