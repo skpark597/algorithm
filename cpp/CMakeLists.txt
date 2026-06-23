@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(YEAR_MONTH 2026_06)
-set(FILE_NAME RemoveDuplicatesFromSortedListII.cc)
+set(FILE_NAME RomanToInteger.cc)
 
 file(GLOB SRC_FILES "./${YEAR_MONTH}/${FILE_NAME}")
 
@@ -16,5 +16,5 @@ include_directories(${CMAKE_SOURCE_DIR}/common)
 add_subdirectory(common)
 
 add_executable(algorithm ${SRC_FILES}
-    2026_06/RemoveDuplicatesFromSortedListII.cc)
+    2026_06/RomanToInteger.cc)
 target_link_libraries(algorithm PUBLIC common)
