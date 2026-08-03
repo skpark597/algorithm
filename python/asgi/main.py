@@ -1,5 +1,6 @@
 from asgi.mini_starlette import LoggingMiddleware
 from asgi.mini_fastapi import FastAPI
+from asgi.mini_uvicorn import run
 
 
 app = FastAPI(middleware=[LoggingMiddleware])
@@ -18,3 +19,7 @@ async def users(request):
 @app.post("/users")
 async def create_user(request):
     return {"message": "user created"}
+
+
+if __name__ == "__main__":
+    run(app)
