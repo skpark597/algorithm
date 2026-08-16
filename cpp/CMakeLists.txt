@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(YEAR_MONTH 2026_08)
-set(FILE_NAME CourseSchedule.cc)
+set(FILE_NAME KthSmallestElementInaBST.cc)
 
 file(GLOB SRC_FILES "./${YEAR_MONTH}/${FILE_NAME}")
 
@@ -16,5 +16,5 @@ include_directories(${CMAKE_SOURCE_DIR}/common)
 add_subdirectory(common)
 
 add_executable(algorithm ${SRC_FILES}
-               2026_08/CourseSchedule.cc)
+               2026_08/KthSmallestElementInaBST.cc)
 target_link_libraries(algorithm PUBLIC common)
