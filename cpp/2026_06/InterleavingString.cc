@@ -41,7 +41,7 @@ Follow up: Could you solve it using only O(s2.length) additional memory space? *
 using namespace std;
 
 bool isInterleave(string s1, string s2, string s3) {
-  bool result = false;
+  bool result = true;
 
   return result;
 }
