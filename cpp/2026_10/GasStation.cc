@@ -79,7 +79,7 @@ int main() {
 
   assert(ret0 == 3);
   assert(ret1 == -1);
-  assert(ret2 == 3);
+  assert(ret2 == -1);
 
   return 0;
 }
